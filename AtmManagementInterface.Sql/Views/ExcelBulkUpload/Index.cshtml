@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="card ">
+
+    <div class="card card-chart">
+        <div class="card-header">
+            <h5 class="card-category text-center">Excel Upload</h5>
+
+        </div>
+        <div class="card-body">
+            <form class="form-inline" asp-action="createFile">
+                <input name="fileName" type="hidden" class="form-control" value="">
+                <button type="submit" id="btnDownloadfs" title="Download!">
+                    Dowload Template
+                </button>
+            </form>
+            <hr />
+            <div class="card-body">
+
+                <form class="form-inline">
+
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <input id="doctemplate" placeholder="Upload template" autofocus type="file" class="file" />
+                            <div class="invalid-feedback">
+                                Please upload template.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <button class="btn btn-file" id="BtnUploadTemp" type="button" value="Save Record">
+                                <i class="now-ui-icons ui-1_simple-add"></i>
+                                Upload
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </form>
+                <form asp-action="ImportBulkTransaction" id="uploadTransfer">
+
+                    <hr />
+                    
+
+                    <div class="card-body">
+                        <div id="chart-toolbar">
+                            <div class="form-group text-right">
+                          
+                                <button class="btn btn-success" id="btnSend" type="button" value="Save Record">
+                                    <i class="now-ui-icons ui-1_check"></i>
+                                    Submit Upload
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <table id="batchTable" data-toggle="table" class="data-table"
+                               data-url="@Url.Action("listGeneralupload", "ExcelBulkUpload")"
+                               data-search="true"
+                               data-search-align="right"
+                               data-show-export="true"
+                               data-toolbar="#chart-toolbar"
+                               data-mobile-responsive="true"
+                               data-show-refresh="true"
+                               data-show-toggle="true"
+                               data-show-columns="true"
+                               data-detail-formatter="detailFormatter"
+                               data-page-list="[10,25, All]"
+                               data-check-on-init="true"
+                               data-pagination="true"
+                               data-page-list-align="top"
+                               data-click-to-select="true"
+                               data-buttons-class="success">
+                            <thead>
+                                <tr>
+                                    <th data-field="state" data-checkbox="true"></th>
+                                    <th data-field="atmId" data-sortable="true"><b>ATM ID</b></th>
+                                    <th data-field="tns" data-sortable="true"><b>Tns</b></th>
+                                    <th data-field="brand" data-sortable="true"><b>Brand</b></th>
+                                    <th data-field="pan" data-sortable="true"><b>Pan</b></th>
+                                    <th data-field="amount" data-formatter="formatnumber" data-sortable="true">Amount</th>
+                                    <th data-field="currency" data-sortable="true">Currency</th>
+                                    <th data-field="availableAmt" data-formatter="formatnumber"  data-sortable="true">Available Amount</th>
+                                    <th data-field="sourceAcct" data-sortable="true">Source Account</th>
+                                    <th data-field="destinantionAcct" data-sortable="true">Destination Account</th>
+                                    <th data-field="transactionType" data-sortable="true">Transaction Type</th>
+                                    <th data-field="" data-align="left" data-events="bulkEvents" data-width="-5%" data-formatter="bulkFormatter">  </th>
+                                </tr>
+                            </thead>
+                        </table>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts {
+
+    <script src="~/js/bulkupload.js" .time();></script>
+
+
+}
+
+

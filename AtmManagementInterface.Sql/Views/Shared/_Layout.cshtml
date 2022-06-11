@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ATM_Management_Interface</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <environment include="Development">
+        <link href="/css/Montserrat.css" rel="stylesheet" />
+        <link href="/css/all.css" rel="stylesheet" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        @*<link href="~/css/now-ui-dashboard.css" rel="stylesheet" />*@
+        @*<link href="~/css/pace/red/pace-theme-flat-top.css" rel="stylesheet" />*@
+        <link href="~/css/bootstraptable/bootstrap-table.css" rel="stylesheet" />
+        <link href="~/css/now-ui-dashboard.minf700.css" rel="stylesheet" />
+        @*<link href="~/css/pace/red/pace-theme-material.css" rel="stylesheet" />*@
+        <link href="~/css/fontawesome/css/all.css" rel="stylesheet" />
+        <link href="~/css/select2.css" rel="stylesheet" />
+        @*<link href="~/css/select2/select2.css" rel="stylesheet" />*@
+        <link href="~/css/select2/select2-bootstrap4.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link href="/css/Montserrat.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="/css/all.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+        @*<link href="~/css/now-ui-dashboard.css" rel="stylesheet" />*@
+        <link href="~/css/pace/red/pace-theme-flat-top.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/now-ui-dashboard.minf700.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/pace/red/pace-theme-flash.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/bootstraptable/bootstrap-table.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/fontawesome/css/all.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/select2/select2.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/select2/select2-bootstrap4.css" rel="stylesheet" asp-append-version="true" />
+        @*<link href="~/demo/demo.css" rel="stylesheet" asp-append-version="true" />*@
+    </environment>
+</head>
+<body>
+    <div class="wrapper ">
+
+        <div class="sidebar" data-color=red>
+            <!--
+            Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+        -->
+            <div class="logo">
+                <a href="https://fintrakbankingmmbs.azurewebsites.net" class="simple-text logo-mini">
+                    FB
+                </a>
+                <a href="https://fintrakbankingmmbs.azurewebsites.net" class="simple-text logo-normal">
+                    Fintrak &reg; Bank
+                </a>
+
+                <div class="navbar-minimize">
+                    <button id="minimizeSidebar" class="btn btn-simple btn-icon btn-neutral btn-round">
+                        <i class="now-ui-icons text_align-center visible-on-sidebar-regular"></i>
+                        <i class="now-ui-icons design_bullet-list-67 visible-on-sidebar-mini"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="sidebar-wrapper">
+
+                <div class="user">
+                    <div class="photo">
+                        <img src="~/img/james.jpg" />
+                    </div>
+                    <div class="info">
+                        <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                            <span>
+                                
+                                <b class="caret"></b>
+                            </span>
+                        </a>
+                        <div class="clearfix"></div>
+                        <div class="collapse" id="collapseExample">
+                            <ul class="nav">
+                                <li>
+                                    <a href="http://fintrakbankingmmbs-company.azurewebsites.net/CompanySetup/EditProfile">
+                                        <span class="sidebar-mini-icon">MP</span>
+                                        <span class="sidebar-normal">My Profile</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="http://fintrakbankingmmbs.azurewebsites.net/">
+                                        <span class="sidebar-mini-icon">S</span>
+                                        <span class="sidebar-normal">Settings</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="nav">
+
+
+
+
+
+                    <li @*class="active"*@>
+
+                        <a href="">
+
+                            <i class="now-ui-icons design_app"></i>
+
+                            <p>Dashboard</p>
+                        </a>
+
+                    </li>
+               
+                    <li>
+
+                        <a data-toggle="collapse" href="#generalSetup">
+
+                            <i class="now-ui-icons design_app"></i>
+
+                            <p>
+                                Excel Bulk Upload <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="dropdown" id="generalSetup">
+                            <ul class="nav">
+
+                                <li>
+                                    <a href="@Url.Action("Index","ExcelBulkUpload")">
+                                        <span class="sidebar-mini-icon">EU</span>
+                                        <span class="sidebar-normal"> Excel Upload </span>
+                                    </a>
+                                </li>                         
+
+                            </ul>
+                        </div>
+
+                    </li>
+  
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="#pablo">@RenderSection("title", false)</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+
+                                <a href="@Url.Action("Logout","Account")" class="nav-link">
+                                    <i class="now-ui-icons users_circle-08"></i>
+                                    Welcome , Logout
+                                </a>
+
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+            <div class="panel-header panel-header-sm text-center" style="background: #141e30; background: linear-gradient(90deg,#0c2646 0,#204065 60%,#2a5788)">
+                @RenderSection("pagedescription", false)
+            </div>
+
+
+          
+            <div class="content">
+                <marquee direction="left" style="color:white"></marquee>
+                @RenderBody()
+
+            </div>
+
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="https://www.fintraksoftware.com/">
+                                    Fintrak Software Co. Limited
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://presentation.fintraksoftware.com/">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://blog.fintraksoftware.com/">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright">
+                        &copy;
+                        <script>document.write(new Date().getFullYear())</script> - TheCoreBanking  by <a href="https://www.fintraksoftware.com/" target="_blank">Fintrak Software Co. Limited</a>.
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - ATM_Management_Interface - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+    <environment include="Development">
+        <script src="~/js/core/jquery.js"></script>
+        <script src="~/js/select2.js"></script>
+        @*<script src="~/js/core/select2.full.js"></script>*@
+        <script src="~/js/core/popper.min.js"></script>
+        <script src="~/js/core/bootstrap.min.js"></script>
+        <script src="~/js/focus.js"></script>
+        @*<script src="~/js/core/bootstrap.min.js"></script>*@
+        <script src="~/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/js/plugins/moment.min.js"></script>
+        <script src="~/js/plugins/bootstrap-switch.js"></script>
+        <script src="~/js/plugins/sweetalert2.min.js"></script>
+        <script src="~/js/plugins/jquery.validate.min.js"></script>
+        <script src="~/js/plugins/jquery.bootstrap-wizard.js"></script>
+        <script src="~/js/plugins/bootstrap-selectpicker.js"></script>
+        <script src="~/js/plugins/bootstrap-datetimepicker.js"></script>
+        <script src="~/js/bootstraptable/bootstrap-table.js"></script>
+        <script src="~/js/bootstraptable/export/bootstrap-table-export.js"></script>
+        <script src="~/js/bootstraptable/tableExport.js"></script>
+        <script src="~/js/bootstraptable/mobile/bootstrap-table-mobile.js"></script>
+        @* <script src="~/js/plugins/jquery.dataTables.min.js"></script>*@
+        <script src="~/js/plugins/bootstrap-tagsinput.js"></script>
+        <script src="~/js/plugins/jasny-bootstrap.min.js"></script>
+
+        <script src="~/js/plugins/fullcalendar.min.js"></script>
+        <script src="~/js/plugins/jquery-jvectormap.js"></script>
+        <script src="~/js/plugins/nouislider.min.js"></script>
+        <script async defer src="~/js/plugins/buttons.js"></script>
+        <script src="~/js/plugins/chartjs.min.js"></script>
+        <script src="~/js/plugins/bootstrap-notify.js"></script>
+        <script src="~/js/now-ui-dashboard.minf700.js"></script>
+        <script src="~/js/reversal.js"></script>
+    </environment>
+    <environment exclude="Development">
+
+        <script src="~/js/core/jquery.min.js"></script>
+        <script src="~/js/core/popper.min.js"></script>
+        <script src="~/js/core/bootstrap.min.js"></script>
+        <script src="~/js/select2.js"></script>
+        <script src="~/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/js/plugins/moment.min.js"></script>
+        <script src="~/js/plugins/bootstrap-switch.js"></script>
+        <script src="~/js/focus.js"></script>
+        <script src="~/js/plugins/sweetalert2.min.js"></script>
+        <script src="~/js/plugins/jquery.validate.min.js"></script>
+        <script src="~/js/plugins/jquery.bootstrap-wizard.js"></script>
+        <script src="~/js/plugins/bootstrap-selectpicker.js"></script>
+        <script src="~/js/plugins/bootstrap-datetimepicker.js"></script>
+        <script src="~/js/bootstraptable/bootstrap-table.js"></script>
+        <script src="~/js/bootstraptable/export/bootstrap-table-export.js"></script>
+        <script src="~/js/bootstraptable/tableExport.js"></script>
+        <script src="~/js/bootstraptable/mobile/bootstrap-table-mobile.js"></script>
+        <script src="~/js/plugins/bootstrap-tagsinput.js"></script>
+        <script src="~/js/plugins/jasny-bootstrap.min.js"></script>
+        <script src="~/js/plugins/fullcalendar.min.js"></script>
+        <script src="~/js/plugins/jquery-jvectormap.js"></script>
+        <script src="~/js/plugins/nouislider.min.js"></script>
+        @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>*@
+        <script async defer src="~/js/plugins/buttons.min.js"></script>
+        <script src="~/js/plugins/chartjs.min.js"></script>
+        <script src="~/js/plugins/bootstrap-notify.js"></script>
+        <script src="~/js/now-ui-dashboard.minf700.js?v=1.0.1"></script>
+        <script src="~/js/pace.min.js"></script>
+        <script src="~/js/reversal.js"></script>
+
+
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)*@
+</body>
+</html>

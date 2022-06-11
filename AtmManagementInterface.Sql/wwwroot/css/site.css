@@ -1,0 +1,326 @@
+﻿/* Base styles */
+body {
+    position: relative;
+}
+
+.f24px {
+    font-size: 24px !important;
+}
+
+.panel-header {
+    height: auto;
+}
+
+.form-hint {
+    font-size: .725em;
+}
+
+.search {
+    margin-top: 11px;
+}
+
+.de-emphasize {
+    color: #9a9a9a;
+    font-size: .8571em;
+}
+
+.search .form-control {
+    padding: 10px 18px;
+}
+
+.text-primary {
+    color: rgb(255, 54, 54) !important;
+}
+
+.detail-primary {
+    color: rgb(255, 54, 54);
+    text-transform: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(255, 54, 54);
+}
+
+.detail-icon > i {
+    color: rgb(255, 54, 54);
+    font-weight: bolder;
+}
+
+.required > label::after {
+    content: "*";
+    color: red;
+    padding-left: 3px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Wizard Styles */
+[data-background-color=red] {
+    background-color: rgb(255, 54, 54);
+}
+
+.card-wizard .nav-pills {
+    background-color: transparent;
+}
+
+.card-wizard .card-header {
+    padding-bottom: 15px;
+}
+
+.nav-item:not(:last-child) a.nav-link {
+    margin-right: 0 !important;
+}
+
+.wizard-navigation .nav-item .nav-link {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.wizard-navigation .nav-item a.nav-link.active {
+    background-color: #fff !important;
+    color: rgb(255, 54, 54) !important;
+    box-shadow: 0 5px 35px 0 rgba(0, 0, 0, .3) !important;
+}
+
+.form-control:focus {
+    border-color: rgb(255, 54, 54);
+}
+
+.table-responsive {
+    overflow: visible;
+}
+
+#wizardModal .modal-content .modal-body {
+    padding: 0;
+}
+
+.light-icon {
+    color: #fff;
+}
+
+.opaque {
+    opacity: 1;
+}
+
+.select2-dropdown {
+    overflow-y: hidden;
+}
+
+.headerCustDetails,
+#KYCmodal h5 {
+    font-size: 1.15em;
+}
+
+.headerCustDetails ~ .description,
+.account-header-details ~ .description {
+    font-size: 1em;
+}
+
+/* KYC table overrides */
+#frmKyc table td,
+#frmKyc table th,
+#KYCtable td,
+#KYCtable th {
+    border: none;
+    font-size: .8571em;
+    font-weight: bold;
+}
+
+#frmKyc table td,
+#KYCtable td {
+    color: #9a9a9a;
+    font-weight: normal;
+}
+
+#frmKyc table input {
+    padding: 10px;
+    min-width: 80px;
+}
+
+#frmKyc table select2-selection {
+    padding: 10px;
+}
+
+#frmKyc table .select2-container--bootstrap4 
+.select2-selection--single {
+    height: 2.25rem;
+    padding-left: 10px;
+}
+
+#frmKyc table .select2-container--bootstrap4 
+.select2-selection--single .select2-selection__rendered {
+    display: block;
+}
+
+/* krajee file-input overrides */
+.file-footer-buttons .btn-kv,
+.kv-zoom-actions button,
+.floating-buttons button {
+    padding: 0.25rem 0.5rem;
+    font-size: .8571em;
+    border-width: 1px;
+    border-style: solid;
+    line-height: 1.5;
+    background-color: transparent;
+    color: #6c757d;
+}
+
+.kv-zoom-actions button {
+    position: static !important;
+}
+
+.file-zoom-dialog .modal-content
+.modal-header {
+    border-bottom: 1px solid rgb(233, 236, 239);
+    padding: 1rem;
+}
+
+.krajee-default .file-caption-info {
+    line-height: 1.5;
+}
+
+.file-drop-zone {
+    border: none;
+}
+
+/* Select2 theme overrides start */
+.select2 .select2-container--bootstrap4,
+.select2 .select2-selection,
+.select2-container--bootstrap4 .select2-search--dropdown .select2-search__field,
+.select2-container--bootstrap4 .select2-results__option
+{
+    font-size: .8571em;
+}
+
+.select2-container--bootstrap4 .select2-results__option {
+    padding: 0.375rem;
+}
+
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color: rgb(255, 54, 54);
+}
+
+.select2-container--bootstrap4.select2-container--focus .select2-selection,
+.select2-container--bootstrap4.select2-container--open .select2-selection {
+    border-right-color: rgb(255, 54, 54);
+    border-left-color: rgb(255, 54, 54);
+    border-top-color: rgb(255, 54, 54) !important;
+}
+
+.select2-container--bootstrap4.select2-container--focus .select2-selection,
+.select2-container--bootstrap4.select2-container--open .select2-selection {
+    border-bottom-color: rgb(255, 54, 54);
+}
+
+.select2-container--bootstrap4 .select2-dropdown {
+    border-color: rgb(255, 54, 54) !important;
+}
+
+.select2 .select2-selection {
+    padding-left: 18px;
+}
+
+.select2-container--bootstrap4 .select2-selection__clear {
+    margin-left: 35px;
+}
+
+/*.select2-container .select2-selection--single .select2-selection__rendered {
+    display: inline;
+}*/
+
+.select2-container--bootstrap4 .select2-selection--multiple
+.select2-search--inline .select2-search__field,
+.select2-container--bootstrap4 .select2-selection--multiple 
+.select2-selection__rendered {
+    padding-left: 0;
+    width: 100% !important;
+}
+
+.select2-container .select2-search--inline {
+    display: contents;
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple
+.select2-selection__rendered {
+    padding-top: .6rem;
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple 
+.select2-selection__choice {
+    padding: 0.35rem 0.5rem;
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple 
+.select2-selection__clear {
+    margin-top: 0;
+}
+
+.select2-container--bootstrap4 
+.select2-selection--multiple 
+.select2-selection__choice {
+    border: 1px solid #ced4da;
+    background-color: #e4e4e4;
+}
+
+/* Select2 theme overrides end */
+
+/* datepicker overrides, fixes transparent datepicker */
+.bootstrap-datetimepicker-widget {
+    height: 267px;
+}
+
+/* data table stylings */
+
+.data-table td {
+    font-size: .9em;
+}
+
+.bootstrap-table .pagination-detail .dropdown-toggle .caret {
+    display: none;
+}
+
+.bootstrap-table .pagination-detail {
+    margin-top: 0;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item.active .page-link:hover,
+.pagination .page-item.active .page-link:focus {
+    background-color: rgb(255, 54, 54);
+    border-color: rgb(255, 54, 54);
+}
+
+.data-table thead > tr > th {
+    font-size: 1em;
+    font-weight: bold;
+    /*color: rgb(255, 54, 54);*/
+}
+
+#customer-card .fixed-table-container {
+    border: none;
+    border-top: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#customer-card #data-table {
+    margin-bottom: 15em !important;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#customer-card .fixed-table-pagination {
+    margin-top: -15em;
+}
+
+/* Miscellaneous */
+#accountTypes .dropdown-menu .dropdown-item {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+img.no-radius {
+    border-radius: 0;
+}
+
+.form-check .form-check-label {
+    position: initial;
+}
